@@ -1,7 +1,8 @@
-import { toDos } from "../Database/toDos";
+import { toDos } from "../Database/toDos.js";
+import { deleteToDo } from "./delete.js";
 
 export function renderTodos(){
-    
+    document.getElementById("toDos").innerHTML = " <h1>My To Dos</h1>"
     toDos.forEach((toDo) => {
         console.log(toDo)
         const toDoDiv  = document.createElement("div")
@@ -17,6 +18,12 @@ export function renderTodos(){
         todoStatus.classList.add('taskStatus')
         toDoDiv.appendChild(todoStatus)
     
+        const toDoDeletButton = document.createElement('button')
+        toDoDeletButton.textContent = "X"
+        toDoDeletButton.classList.add('taskButtons')
+        toDoDeletButton.addEventListener("click", deleteToDo)
+        toDoDiv.appendChild(toDoDeletButton)
+
         const toDoList = document.getElementById('toDos')
         toDoList.appendChild(toDoDiv)
     });

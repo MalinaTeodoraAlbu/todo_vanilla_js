@@ -1,4 +1,5 @@
 import { toDos } from "../Database/toDos.js";
+import {renderTodos} from '../Todos/rendersTodos.js'
 
 export function addToDo(e){
     e.preventDefault();
@@ -11,5 +12,7 @@ export function addToDo(e){
     newtoDo.status = document.getElementById('addEditTaskStatus').value
 
     toDos.push(newtoDo)
+    renderTodos()
     console.log(toDos)
+    
 }

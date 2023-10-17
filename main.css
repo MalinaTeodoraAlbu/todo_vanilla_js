@@ -34,3 +34,11 @@ button {
     color: rgb(218, 167, 106);
     margin: 50px;
 }
+
+.taskButtons{
+    display: inline;
+    width: 50px;
+    max-width: 50px;
+    background-color: white;
+    border: none;
+}
