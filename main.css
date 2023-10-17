@@ -1,4 +1,20 @@
 body *{
 box-sizing: border-box;
 font-family: sans-serif;
+
+}
+
+button, input {
+    width: 200px;
+    height: 2rem;
+    padding: 7px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    display: block;
+    margin: 10px;
+}
+
+button {
+    background-color: bisque;
+    font-weight: bold;
 }
